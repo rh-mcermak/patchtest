@@ -53,7 +53,7 @@ rlJournalStart
     rlPhaseEnd
 
     rlPhaseStart FAIL "Install deps"
-        # rlRun "$PKGMGR clean all"
+        rlRun "$PKGMGR clean all"
         # rlRun "$PKGMGR -y update"
         # rlRun "$PKGMGR -y install $RPM_REQS"
         rlRun "$PKGMGR -y install --setopt=multilib_policy=all libgcc glibc-devel gcc-c++ libstdc++-devel"
