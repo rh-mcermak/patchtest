@@ -3,7 +3,9 @@
 export TZ=Europe/Prague
 
 run:
-	testing-farm request --compose Fedora-Rawhide --git-url  https://gitlab.cee.redhat.com/mcermak/tmtupstreamstap.git
+	# For list of composes: https://docs.testing-farm.io/Testing%20Farm/0.1/test-environment.html#_composes
+	# --compose Fedora-Rawhide
+	testing-farm request --compose centos-stream-8 --git-url https://github.com/rh-mcermak/patchtest.git
 
 lint:
 	tmt plans lint
