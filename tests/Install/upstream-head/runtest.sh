@@ -42,7 +42,7 @@ ORIGPWD=$( pwd )
 export CLONE_CMD='git clone git://sourceware.org/git/systemtap.git'
 
 PKGMGR="yum --nogpgcheck --enablerepo=\*"
-rpm -q dnf && PKGMGR="dnf --setopt=clean_requirements_on_remove=false --nobest --setopt=strict=0 --nogpgcheck --enablerepo=\*"
+rpm -q dnf && PKGMGR="dnf --setopt=clean_requirements_on_remove=false --setopt=metadata_expire=99999999 --nobest --setopt=strict=0 --nogpgcheck --enablerepo=\*"
 
 rlJournalStart
     rlPhaseStartSetup
