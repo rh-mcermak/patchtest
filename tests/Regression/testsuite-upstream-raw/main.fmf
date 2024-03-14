@@ -1,0 +1,14 @@
+summary: testsuite-upstream-raw
+enabled: true
+component:
+  - systemtap
+test: ./runtest.sh
+framework: beakerlib
+duration: 72h
+# check:
+#   - how: watchdog
+#     interval: 2
+#     reboot: true
+#     ping: true
+#     ping-packets: 1
+#     ping-threshold: 3

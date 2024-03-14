@@ -1,0 +1,33 @@
+---
+summary:
+  CI plan
+discover:
+  # - name: fedora_tests
+  #   how: fmf
+  #   url: https://src.fedoraproject.org/rpms/systemtap.git
+  #   exclude: tracepoints-operational
+  - name: local_tests
+    how: fmf
+# prepare:
+#     how: shell
+#     script:
+#         - yum config-manager --set-enabled beaker-CRB
+adjust+:
+  - when: distro is defined and distro > rhel-7
+    prepare+:
+      - name: Install
+        how: install
+        package:
+          - beakerlib
+          - systemtap-testsuite
+          - dejagnu
+          - gettext
+          - elfutils
+          - elfutils-devel
+          - dyninst
+          - dyninst-devel
+execute:
+  how: tmt
+#
+#
+# vim: set ts=2 sts=2 sw=2 expandtab:

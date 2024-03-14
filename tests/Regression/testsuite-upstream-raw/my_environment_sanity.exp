@@ -1,0 +1,6 @@
+set test "my_environment_sanity_test"
+
+environment_sanity_test
+print_system_info
+
+pass $test

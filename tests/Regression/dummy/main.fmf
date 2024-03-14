@@ -1,0 +1,11 @@
+summary: 'Dummy test'
+description: 'Dummy test'
+contact: Martin Cermak <mcermak@redhat.com>
+component:
+- systemtap
+test: ./runtest.sh
+framework: beakerlib
+recommend:
+- dejagnu
+- expect
+duration: 48h

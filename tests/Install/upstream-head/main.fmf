@@ -1,0 +1,50 @@
+summary: Build fresh systemtap RPMs from the upstream git and install them.
+description: ''
+contact: Martin Cermak <mcermak@redhat.com>
+component:
+  - nothing
+test: ./runtest.sh
+framework: beakerlib
+enabled: true
+recommend:
+  - libstdc++
+  - libstdc++-devel
+  - libstdc++-devel.x86_64
+  - libgcc
+  - glibc-devel
+  - gcc-c++
+  - kernel-devel
+  - kernel-headers
+  - git
+  - curl
+  - tar
+  - dejagnu
+  - elfutils-devel
+  - gettext
+  - gettext-devel
+  - nss-devel
+  - avahi-devel
+  - dyninst-devel
+  - libselinux-devel
+  - sqlite-devel
+  - json-c-devel
+  - ncurses-devel
+  - crash-devel
+  - rpm-devel
+  - emacs
+  - jpackage-utils
+  - java-devel
+  - libvirt-devel
+  - libxml2-devel
+  - readline-devel
+  - python-devel
+  - python3-devel
+  - rpm-build
+  - python-setuptools
+  - python2-setuptools
+  - python2-pyparsing
+  - dyninst-devel
+  - elfutils-debuginfod-client-devel
+duration: 8h
+extra-summary: /tools/systemtap/Install/upstream-head
+extra-task: /tools/systemtap/Install/upstream-head

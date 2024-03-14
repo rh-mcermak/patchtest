@@ -1,0 +1,3 @@
+PURPOSE of /tools/systemtap/Install/upstream-head
+Description: create RPMs from the upstream head and install them
+Author: Martin Cermak <mcermak@redhat.com>
