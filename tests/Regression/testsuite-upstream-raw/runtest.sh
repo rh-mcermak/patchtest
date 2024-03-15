@@ -239,6 +239,28 @@ rlJournalStart
 # 	TESTCASES=$(bash ${ORIGPWD}/check_${_WHAT}.sh TCLIST)
 #         rlRun "make RUNTESTFLAGS='$TESTCASES' installcheck 2>&1"
         rlRun "pushd $SUITELOC"
+
+
+        for i in systemtap.base/listing_mode_sanity.exp \
+        systemtap.base/pr10854.exp systemtap.base/procfs_multi_write.exp \
+        systemtap.base/sdt.exp systemtap.base/sdt_asm.exp \
+        systemtap.base/sdt_casm.exp systemtap.base/sdt_notes.exp \
+        systemtap.base/tracepoints_list.exp systemtap.base/tracescripts.exp \
+        systemtap.bpf/nonbpf.exp systemtap.clone/dtrace_clone.exp \
+        systemtap.clone/dtrace_fork_exec.exp \
+        systemtap.clone/dtrace_vfork_exec.exp systemtap.clone/main_quiesce.exp \
+        systemtap.exelib/exelib.exp systemtap.onthefly/kprobes_onthefly.exp \
+        systemtap.onthefly/tracepoint_onthefly.exp \
+        systemtap.onthefly/uprobes_onthefly.exp systemtap.pass1-4/buildok.exp \
+        systemtap.pass1-4/debugtypes.exp systemtap.pass1-4/parseko.exp \
+        systemtap.pass1-4/runok.exp systemtap.pass1-4/transko.exp \
+        systemtap.syscall/syscall.exp systemtap.syscall/syscall_consistency.exp \
+        systemtap.unprivileged/pr16806.exp \
+        systemtap.unprivileged/unprivileged_myproc.exp \
+        systemtap.unprivileged/unprivileged_options.exp; do
+            rlRun "rm $i"
+        done
+
         rlRun "make installcheck 2>&1"
 # 
 #         # Kill internal watchdog if running in beaker

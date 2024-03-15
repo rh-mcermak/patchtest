@@ -32,7 +32,7 @@
 rlJournalStart
     rlPhaseStartTest
         rlRun "echo 'Heya!'"
-        # rlRun "sleep 12h"
+        rlRun "sleep 12h"
     rlPhaseEnd
 rlJournalPrintText
 rlJournalEnd
