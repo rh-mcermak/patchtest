@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := run
 
 export TZ=Europe/Prague
+export TMT_NO_COLOR=1
 
 run:
 	# For list of composes: https://docs.testing-farm.io/Testing%20Farm/0.1/test-environment.html#_composes
